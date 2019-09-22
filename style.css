@@ -1,0 +1,337 @@
+﻿*{
+  box-sizing: border-box;
+  /*border: solid 1px red;*/
+}
+
+body{
+  margin: 0;
+  overflow: hidden;
+  background: #A5DEE4;
+  font-family: 微軟正黑體;
+}
+
+.ball{
+  position: absolute;
+  width: 400px;
+  height: 500px;
+  top: 50%;
+  left: 50%;
+  background: #A5DEE4;
+  opacity: 1;
+  transform: translate(-50%,-50%);
+  border: solid 1px white;
+  border-radius: 200px 200px 100px 100px;
+  box-shadow: 0px 2px 0px rgba(0,0,0,0.5);
+}
+
+.menu{
+  position: absolute;
+  width: 100%;
+  height: 30%;
+  right: 0;
+  bottom: -1px;
+  background: #ffffff;
+  border-radius: 0 0 100px 100px;
+}
+
+.btn{
+  width: 80px;
+  height: 40px;
+  position: absolute;
+  bottom: 10%;
+  /*background: #2b545c;*/
+  color: #2b545c;
+  font-size: 20px;
+  text-align: center;
+  line-height: 40px;
+  transform: translate(-50%,-50%);
+  font-weight: 800;
+}
+
+.btn.b1{
+  left: 25%;
+}
+
+.btn.b2{
+  left: 50%;
+}
+
+.btn.b3{
+  left: 75%;
+}
+
+.knob{
+  position: absolute;
+  top: 30%;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  transform: translate(-50%,-50%);
+}
+
+.knob.k1{
+  left: 25%;
+  background: #5ee0d8;
+}
+
+.knob.k2{
+  left: 50%;
+  background: #5ee0d8;
+}
+
+.knob.k3{
+  left: 75%;
+  background: #5ee0d8;
+}
+
+.knob.k1:hover{
+  cursor: pointer;
+}
+
+.knob.k2:hover{
+  cursor: pointer;
+}
+
+.knob.k3:hover{
+  cursor: pointer;
+}
+
+.kk1{
+  position: absolute;
+  width: 10px;
+  height: 40px;
+  background: #5ee0d8;
+  left: 20px;
+  top: 5px;
+  border: solid 1px white;
+  transform: rotate(45deg);
+}
+
+.kk2{
+  position: absolute;
+  width: 10px;
+  height: 40px;
+  background: #5ee0d8;
+  left: 20px;
+  top: 5px;
+  border: solid 1px white;
+  transform: rotate(45deg);
+}
+
+.kk3{
+  position: absolute;
+  width: 10px;
+  height: 40px;
+  background: #5ee0d8;
+  left: 20px;
+  top: 5px;
+  border: solid 1px white;
+  transform: rotate(45deg);
+}
+
+.knob.k1:hover .kk1{
+  transform: rotate(405deg);
+  transition: transform 0.8s ease;
+}
+
+.knob.k2:hover .kk2{
+  transform: rotate(405deg);
+  transition: transform 0.8s ease;
+}
+
+.knob.k3:hover .kk3{
+  transform: rotate(405deg);
+  transition: transform 0.8s ease;
+}
+
+.snow{
+  position: absolute;
+  bottom: 25%;
+  width: 36%;
+  height: 50px;
+  background: #ffffff;
+  border-radius: 50%;
+}
+
+.snow.s1{
+  left: 0;
+  transform: rotate(-2deg);
+}
+
+.snow.s2{
+  right: 0;
+  transform: rotate(2deg);
+}
+
+.snow.s1:before{
+  content: '';
+  position: absolute;
+  left: 110px;
+  bottom: 10px;
+  width: 100px;
+  height: 30px;
+  background: #ffffff;
+  border-radius: 50%;
+}
+
+.snow.s2:before{
+  content: '';
+  position: absolute;
+  right: 110px;
+  bottom: 10px;
+  width: 100px;
+  height: 30px;
+  background: #ffffff;
+  border-radius: 50%;
+}
+
+.mountain{
+  position: absolute;
+  width: 0;
+  height: 0;
+  background: transparent;
+  border-bottom: 120px solid #eeeeee;
+  border-left: 120px solid transparent;
+  border-right: 120px solid transparent;
+}
+
+.mountain.m1{
+  left: 0;
+  bottom: 28%;
+}
+
+.mountain.m2{
+  left: 18%;
+  bottom: 33%;
+}
+
+.mountain.m3{
+  left: 36%;
+  bottom: 22%;
+}
+
+.mountain.m4{
+  left: 54%;
+  bottom: 20%;
+  transform: scale(0.5);
+}
+
+.cloud{
+  position: absolute;
+  width: 80px;
+  height: 20px;
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 8px 10px 0px #ffffff;
+}
+
+.cloud.c1{
+  top: 16%;
+  left: 15%;
+  opacity: 0.3;
+  animation: moving1 7s ease-in-out infinite alternate;
+}
+
+.cloud.c2{
+  top: 30%;
+  right: 10%;
+  opacity: 0.7;
+  animation: moving2 15s ease-in-out infinite alternate;
+}
+
+@keyframes moving1{
+  100%{
+  transform: translatex(150px);
+  }
+}
+
+@keyframes moving2{
+  100%{
+  transform: translatex(-250px);
+  }
+}
+
+.water{
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 70%;
+  background: #ffffff;
+  opacity: 0.25;
+  border-radius: 200px 200px 0 0;
+}
+
+.penguin{
+  position: absolute;
+  width: 80px;
+  height: 100px;
+  left: 50%;
+  bottom: 20%;
+  background: #000000;
+  border-radius: 90px 90px 60px 60px;
+  transform: translate(-50%,-50%);
+}
+
+.face{
+  position: absolute;
+  width: 26px;
+  height: 36px;
+  top: 12px;
+  background: #fafaf2;
+  border-radius: 50%;
+}
+
+.face.f1{
+  left: 12px;
+  transform: rotate(-8deg);
+}
+
+.face.f2{
+  right: 12px;
+  transform: rotate(8deg);
+}
+
+.body{
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  background: #fafaf2;
+  left: 50%;
+  top: 66px;
+  border-radius: 20px;
+  transform: translate(-50%,-50%);
+}
+
+.eye{
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  top: 30px;
+  background: #000000;
+  border-radius: 50%;
+}
+
+.eye.e1{
+  left: 24px;
+}
+
+.eye.e2{
+  right: 24px;
+}
+
+.mouse{
+  position: absolute;
+  width: 10px;
+  height: 6px;
+  top: 33px;
+  left: 50%;
+  background: #ff8c00;
+  border-radius: 50%;
+  transform: translate(-50%,-50%);
+}
+
+h1{
+  position: absolute;
+  left:150px;
+  color: #ffffff;
+}
